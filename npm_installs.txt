@@ -1,0 +1,7 @@
+npm i next-auth
+npm i @next-auth/prisma-adapter
+
+npm i prisma
+npm i @prisma/client
+npx prisma init
+npx prisma migrate dev
