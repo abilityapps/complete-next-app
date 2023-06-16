@@ -1,7 +1,17 @@
+// Create a new Next.js app, with TypeScript, Tailwind CSS, and ESLint, with the new App Router, without using the src/ directory
+npx create-next-app@latest
+
+// Install Next-Auth and Prisma adapter
 npm i next-auth
 npm i @next-auth/prisma-adapter
 
+// Install Prisma, initialize it and create a migration
 npm i prisma
 npm i @prisma/client
 npx prisma init
 npx prisma migrate dev
+
+// Install Component Library that uses Tailwind CSS and Radix UI
+npx shadcn-ui init
+
+npm i date-fns
