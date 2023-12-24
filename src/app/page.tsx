@@ -1,11 +1,11 @@
-import TodoList from "@/components/TodoList";
-import {Button} from "@/components/ui/button";
+import {serverClient} from "@/app/_trpc/serverClient";
+import PeopleList from "@/components/TodoList";
 
-export default function Home() {
+export default async function Home() {
+	const people = await serverClient.getAllPeople();
 	return (
 		<div>
-			<Button>Hello world!</Button>
-			<TodoList />
+			<PeopleList initialPeople={people} />
 		</div>
 	);
 }

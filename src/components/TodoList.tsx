@@ -1,7 +1,32 @@
 "use client";
 import {trpc} from "@/app/_trpc/client";
+import {serverClient} from "@/app/_trpc/serverClient";
+import {Button} from "@/components/ui/button";
 
-export default function TodoList() {
-	const f = trpc.hello.useQuery();
-	return <div>{JSON.stringify(f.data)}</div>;
+export default function TodoList({ initialPeople }: {initialPeople: Awaited<ReturnType<(typeof serverClient)["getAllPeople"]>>}) {
+	// const formSchema = z.object({
+	// 	name: z.string().min(2).max(50),
+	// 	age: z.number().min(0).max(100),
+	// });
+
+	const getPeoples = trpc.getAllPeople.useQuery(undefined, {
+		initialData: initialPeople,
+		refetchOnMount: false,
+		refetchOnReconnect: false
+	});
+	const addPerson = trpc.addPerson.useMutation();
+	const deleteAllPeople = trpc.deleteAllPeople.useMutation();
+
+	return (
+		<div>
+			{JSON.stringify(getPeoples.data)}
+
+			<Button onClick={() => addPerson.mutate({ name: "hello", age: 20 })}>
+				add person
+			</Button>
+			<Button onClick={() => deleteAllPeople.mutate()}>
+				delete all people
+			</Button>
+		</div>
+	);
 }
