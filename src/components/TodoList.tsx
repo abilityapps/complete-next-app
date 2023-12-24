@@ -4,11 +4,6 @@ import {serverClient} from "@/app/_trpc/serverClient";
 import {Button} from "@/components/ui/button";
 
 export default function TodoList({ initialPeople }: {initialPeople: Awaited<ReturnType<(typeof serverClient)["getAllPeople"]>>}) {
-	// const formSchema = z.object({
-	// 	name: z.string().min(2).max(50),
-	// 	age: z.number().min(0).max(100),
-	// });
-
 	const getPeoples = trpc.getAllPeople.useQuery(undefined, {
 		initialData: initialPeople,
 		refetchOnMount: false,
