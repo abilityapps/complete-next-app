@@ -1,7 +1,7 @@
-import {people} from "@/db/schema";
-import {publicProcedure} from "@/server/trpc";
-import {BetterSQLite3Database} from "drizzle-orm/better-sqlite3";
-import {z} from "zod";
+import { people } from "@/db/schema";
+import { publicProcedure } from "@/server/trpc";
+import { BetterSQLite3Database } from "drizzle-orm/better-sqlite3";
+import { z } from "zod";
 
 export function getAllPeople(db: BetterSQLite3Database<Record<string, never>>) {
 	return publicProcedure.query(async () => {

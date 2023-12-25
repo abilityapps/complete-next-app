@@ -1,4 +1,4 @@
-import {serverClient} from "@/app/_trpc/serverClient";
+import { serverClient } from "@/app/_trpc/serverClient";
 import PeopleList from "@/components/TodoList";
 
 export default async function Home() {
