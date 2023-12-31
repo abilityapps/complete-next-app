@@ -1,9 +1,9 @@
 "use client";
-import {Button} from "@/components/ui/button";
-import {trpc} from "@/utils/trpc/client";
-import {serverClient} from "@/utils/trpc/serverClient";
+import { Button } from "@/components/ui/button";
+import { trpc } from "@/utils/trpc/client";
+import { serverClient } from "@/utils/trpc/serverClient";
 import Link from "next/link";
-import {toast} from "sonner";
+import { toast } from "sonner";
 
 export default function TodoList({
 	initialPeople,

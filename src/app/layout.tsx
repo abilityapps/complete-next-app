@@ -1,10 +1,10 @@
 import NavMenu from "@/components/Navmenu";
-import {Toaster} from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 import AuthSessionProvider from "@/utils/AuthSessionProvider";
 import TRPCProvider from "@/utils/trpc/TRPCProvider";
-import type {Metadata} from "next";
-import {getServerSession} from "next-auth";
-import {Inter} from "next/font/google";
+import type { Metadata } from "next";
+import { getServerSession } from "next-auth";
+import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
