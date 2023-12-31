@@ -1,7 +1,9 @@
 "use client";
-import { trpc } from "@/app/_trpc/client";
-import { serverClient } from "@/app/_trpc/serverClient";
-import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
+import {trpc} from "@/utils/trpc/client";
+import {serverClient} from "@/utils/trpc/serverClient";
+import Link from "next/link";
+import {toast} from "sonner";
 
 export default function TodoList({
 	initialPeople,
@@ -26,6 +28,8 @@ export default function TodoList({
 			<Button onClick={() => deleteAllPeople.mutate()}>
 				delete all people
 			</Button>
+			<Button onClick={() => toast.success("Hello World")}>Toast</Button>
+			<Link href={"/jest-example"}>hi</Link>
 		</div>
 	);
 }
