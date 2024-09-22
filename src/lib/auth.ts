@@ -20,7 +20,8 @@ export const providerMap = providers
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers,
-  // pages: {
-  //   signIn: "/sign-in",
-  // },
+  pages: {
+    signIn: "/sign-in",
+    signOut: "/sign-out",
+  },
 })
