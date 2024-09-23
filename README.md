@@ -36,3 +36,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 Run `bunx auth secret` to generate AUTH_SECRET needed for Auth.js
+
+Run `bunx biome check --write .` to format all files.
