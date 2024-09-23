@@ -3,10 +3,10 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
+		"dev": "next dev --turbo",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "bunx biome check --write ."
 	},
 	"dependencies": {
 		"@radix-ui/react-dropdown-menu": "^2.1.1",
