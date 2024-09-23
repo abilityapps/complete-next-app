@@ -1,7 +1,9 @@
-export default function AuthPage() {
+import { SignIn } from "@/components/auth";
+
+export default async function SignInPage() {
 	return (
-		<div>
-			<h1>Sign In Page</h1>
+		<div className="items-center justify-center min-h-screen mt-[25vh]">
+			<SignIn />
 		</div>
 	);
 }
